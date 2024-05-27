@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+
+/* ============================= GEMERAL ============================= */
+.container {margin:0 auto;max-width:1100px;padding:0rem 1rem;}
+.shopping-btn {background-color: #ffd814;color: #0F1111;border-radius:2rem;padding: 0.5rem 1rem;font-size:14px;}
+
+
+/* ============================= HEADER ============================= */
+.header {border-bottom:1px solid #ddd;}
+.header nav {display: flex;align-items: center;justify-content: space-between;height: 5rem;max-width: 96rem;margin-left: auto;margin-right: auto;}
+.header nav .logo-title {font-size: 1.5rem;cursor: pointer;}
+  
+.header nav ul {display: flex;list-style-type: none;align-items: center;}
+.header nav ul li {cursor:pointer;margin-right:10px;}
+  
+
+/* ============================= HOME ============================= */
+.full-screen-center {min-height: 100vh;width: 100%;display: flex;justify-content: center;align-items: center;}
+.full-grid-container {min-height: 80vh;display: grid;max-width: 1100px;margin:0 auto;padding: 0.75rem;}
+
+
+/* ============================= PRODUCT ============================= */
+.product .product-container {display: flex;flex-direction: column;align-items: center;border:1px solid #aaa;padding: 1rem;margin:0.75rem;height: 360px;}
+.product .product-image {height:180px;}
+.product .product-image img {object-fit: cover;height: 100%;width: 100%;}
+.product .product-title {width: 10rem;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;margin-top: 0.75rem;color: #374151;font-weight: bold;font-size: 1.125rem;line-height: 1.75rem;}
+.product .product-button-container {display: flex;align-items: center;justify-content: center;width: 100%;margin-top: 1.25rem;}
+
+
+/* ============================= CART ============================= */
+.cart .cart-container {display:flex;flex-wrap:wrap;}
+.cart-products-container {display: grid;margin-left: auto;margin-right: auto;}
+.centered-flex-container {display: flex;flex-direction: column;justify-content: center;align-items: center;padding: 0.75rem;}
+
+.cart .cart-summary-container {max-width:400px;padding: 1rem;margin-top: 2rem;background-color:#eee;}
+.cart .cart-title {font-weight: bold;font-size: 1.125rem;line-height: 1.75rem;color: #9b2c2c;}
+.cart .cart-summary-label {color: #2d3748;font-weight: bold;}
+  
+.cart .cart-no-products {min-height: 80vh;display: flex;flex-direction: column;align-items: center;justify-content: center;}
+.cart .cart-no-products-title {color: #2d3748;font-weight: bold;font-size: 1.5rem;line-height: 2rem;margin-bottom: 0.5rem;}
+  
+
+/* ============================= CART-TILE ============================= */
+.cart-tile {display: flex;align-items: center;padding: 1.25rem;justify-content: space-between;margin-top: 0.5rem;margin-bottom: 0.5rem;border:1px solid #aaa;}
+.cart-tile-info {display: flex;padding: 0.75rem;width:75%;}
+.cart-tile-img {width:25%;}
+.cart-tile-img img {width:100%;}
+.cart-tile-text {width:75%;margin-left: 2.5rem;align-self: flex-start;}
+.cart-tile-text h1 {font-size: 1.2rem;line-height: 2rem;font-weight: bold;margin-bottom:1rem}
+.cart-tile-text p {margin:0 0 1rem;}
+.cart-tile-btn {width:25%;}
+  
+
+/* ============================= MEDIA QUERIES ============================= */
+@media (min-width: 640px) {
+	.logo-title {font-size: 1.875rem;line-height: 2.25rem;}
+	.full-grid-container.sm\:grid-cols-3 {grid-template-columns: repeat(3, 1fr);}
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (min-width: 768px) {
+	.logo-title {font-size: 2.25rem;line-height: 2.75rem;}
+	.cart-products-container.md\:grid-cols-2 {grid-template-columns: repeat(2, 1fr);}
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (min-width: 1024px) {
+	.full-grid-container.lg\:grid-cols-4 {grid-template-columns: repeat(4, 1fr);}
 }
